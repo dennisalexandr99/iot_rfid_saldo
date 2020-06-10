@@ -139,20 +139,6 @@ void loop() {
       buffer3[i]=String(balanceInt)[i];
     }
     
-//    String testis="";
-//    for (uint8_t i = 0; i < 16; i++)
-//    {
-//      if (buffer3[i] != 32)
-//      {   
-//          testis+=(char)buffer3[i];
-//      }
-//    }
-//    int testisInt=testis.toInt();
-//    Serial.println("n");
-//    Serial.println(testisInt);
-//    Serial.println("n");
-
-    
     /////////////////////////////////////////////////////////////////////////////////////////////////kurangin saldo
     byte buffer[34];
     byte block;
@@ -160,22 +146,7 @@ void loop() {
     byte len;
     Serial.setTimeout(20000L) ;
 
-//    for (uint8_t i = 0; i < 16; i++)
-//    {
-//      if (buffer1[i] != 32)
-//      {
-//          balance+=(char)buffer1[i];
-//      }
-//    }
-
-//    Serial.println(F("Type Family name, ending with #"));
-//    Serial.println((char)balanceInt);
-//    len = balanceInt;
-//    len = Serial.readBytesUntil('#', (char *) buffer, 30) ;
-//    for (byte i = len; i < 30; i++) buffer[i] = ' ';     // pad with spaces    
-//    Serial.println("len");
-//    Serial.println(len);
-  
+ 
     block = 4;
     //Serial.println(F("Authenticating using key A..."));
     status = mfrc522.PCD_Authenticate(MFRC522::PICC_CMD_MF_AUTH_KEY_A, block, &key, &(mfrc522.uid));
